@@ -8,7 +8,7 @@ print(my_list)
 
 #learning  = "set"
 
-my_set = {"red","blue","yellow","broun","gray"}
+my_set = {"red","blue","yellow","brown","gray"}
 print(my_set)
 my_set.add("color")
 print(list(my_set))
