@@ -38,3 +38,10 @@ my_set.remove("gray")
 print(my_set)
 titi.remove(my_set)
 print(titi)
+
+'''def counter(some.pdf):
+    from pypdf import PdfReader
+    reader = PdfReader("some.pdf")
+    print(len(reader.pages))        
+
+print(counter("val is a  good boy \n  val is a bad boy"))'''
