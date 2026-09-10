@@ -1,0 +1,3 @@
+The embedding model was trained on huge amounts of text where it learned which words and ideas tend to show up together in similar contexts.
+Concepts like "career," "choice," "engineering," "bridges," "connecting people," and "civil engineering" all statistically cluster near each other across the training data — they belong to the same semantic neighborhood.
+So when the model sees your question "Why did John choose civil engineering?", it recognizes it's about a career decision, and it maps that meaning to a point in number-space near other texts about career decisions, professions, choices, and reasoning about the future.
