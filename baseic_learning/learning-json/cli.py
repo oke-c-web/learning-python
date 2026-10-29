@@ -1,20 +1,25 @@
 import json
 import os
 
-def create_ticket():
-    title = input("enter ticket title: ")
-    description = input("enter ticket description: ")
+def budget_remaniing(budget, food, transport):
+    return budget-food-transport
 
-    ticket = {
-        "id": 1,
-        "title": title,
-        "description": description,
-        "status": "open"
-    }
+budget = int(input("budget: "))
+food = int(input("food: "))
+transport = int(input("transport: "))
 
-    return ticket
+remaniing = budget_remaniing(budget, food, transport)
 
-def save_create(ticket):
+def budget_massage(name, remaniing):
+    return f"{name} has {remaniing} naira remaing."
+
+name = str(input("enter user name: "))
+
+massage = budget_massage(name, remaniing )
+
+print(massage)
+
+def save_create(massage):
     filename = "tickets.json"
 
     if os.path.exists(filename):
@@ -23,7 +28,10 @@ def save_create(ticket):
     else:
         tickets = []
     
-    ticket["id"] = len(tickets) + 1
+    ticket = {
+        "id": len(tickets) + 1,
+        "massage": massage
+    }
     tickets.append(ticket)
 
     with open(filename, "w") as file:
@@ -32,7 +40,7 @@ def save_create(ticket):
 
     print("ticket created and saved succesfully!")
 
-ticket = create_ticket()
-save_create(ticket)
+#ticket = create_ticket()
+save_create(massage)
     
 
